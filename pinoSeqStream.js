@@ -49,6 +49,8 @@ class PinoSeqStream extends stream.Writable {
           if (this._logOtherAs) {
             this.flushBuffer();
           }
+
+          console.log((String(message)));
           this._logger.emit(forSeq);
         } catch (err) {
           console.error(err);
